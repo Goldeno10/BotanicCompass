@@ -1,5 +1,5 @@
 # BotanicCompass
-With Botanic, our mission is to bridge the gap between traditional herbal knowledge and modern pharmacology. We aim to provide a user-friendly platform for researchers, students, herbalists, and anyone interested in the world of medicinal plants to access vital information in a seamless and organized manner.
+With BotanicCompass, our mission is to bridge the gap between traditional herbal knowledge and modern pharmacology. We aim to provide a user-friendly platform for researchers, students, herbalists, and anyone interested in the world of medicinal plants to access vital information in a seamless and organized manner.
 
 ## What Sets Us Apart
 
