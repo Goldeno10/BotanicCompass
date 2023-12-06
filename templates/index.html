@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Medicinal Plants e-Nomenclature</title>
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+{% endblock css %}
+
+{% block body %}
+<section id="section-id">
+    <div class="search-container">
+        {% csrf_token %}
+        <div id="search-by-div">
+            <label for="search-by">Search By:</label>
+            <select id="search-by">
+                <option value="scientific_name" selected>SCIENTIFIC NAME</option>
+                <option value="hausa_name">HAUSA NAME</option>
+                <option value="common_name">COMMON NAME</option>
+            </select>
+        </div>
+        <input type="text" id="search-input" placeholder="Enter your search term">
+        <button id="search-button" onclick="fetchData()">Search</button>
+    </div>
+    <div id="result">
+        <div class="res-item">
+            <h4 id="family-h3">Family name</h3>
+                <p id="family-p">Loading...</p>
+        </div>
+        <div class="res-item">
+            <h4 id="scientific-name-h3">Scientific name</h3>
+                <p id="scientific-name-p">Loading...</p>
+        </div>
+        <div class="res-item">
+            <h4 id="hausa-name-h3">Hausa name(s)</h3>
+                <p id="hausa-name-p">Loading...</p>
+        </div>
+        <div class="res-item">
+            <h4 id="common-h3">Common name(s)</h3>
+                <p id="common-p">Loading...</p>
+        </div>
+        <div class="res-item">
+            <h4 id="synonym-h3">Synonym(s)</h3>
+                <p id="synonym-p">Loading...</p>
+        </div>
+    </div>
+</section>
+{% endblock body %}
+
+{% block js %}
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock js %}

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    {% endblock title %}
+    {% block css %}
+    {% endblock css %}
+</head>
+
+<body>
+    <main id="main">
+        <header>
+            <div class="logo-container">
+                <img src="{%static 'images/Lottoleaf2.PNG' %}" alt="Logo" height="70x#px" width="50px">
+            </div>
+            <h3>MEDICINAL PLANTS e-NOMENCLATURE SYSTEM</h3>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="{% url 'homepage' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        {% block body %}
+        {% endblock body %}
+        <footer>
+            <hr>
+            <div class="university-header" style="font-size: 15px;">
+                <p style="font-size: 10px;">Department of Pharmacognosy & Drug
+                    Development</p>
+                <p style="font-size: 10px;">Faculty of Pharmaceutical Sciences</p>
+                <p style="font-size: 10px;">Ahmadu Bello University,Zaria</p>
+            </div>
+        </footer>
+        {% block js %}
+        {% endblock js %}
+    </main>
+</body>
+
+</html>
