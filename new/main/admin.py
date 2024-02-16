@@ -47,11 +47,12 @@ class PlantDataAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.models.TextField: {'widget': CustomTextareaWidget},
     }
-    list_display = ["scientific_name", "family", "display_hausa_name", "display_common_name", "display_synonym"]
+    list_display = ["scientific_name", "family",
+                    "display_hausa_name", "display_common_name", "display_synonym"]
     inlines = [HausaNameInline, CommonNameInline, SynonymInline]
-    list_per_page = 20
-    search_fields = ["scientific_name", "family", "hausa_name__name", "common_name__name", "synonym__name"]
-
+    search_fields = ['common_name', 'family',
+                     'hausa_name', 'scientific_name', 'synonym']
+    list_per_page = 10
 
     def display_hausa_name(self, obj):
         return ", ".join([hn.name for hn in obj.hausa_name.all()])
